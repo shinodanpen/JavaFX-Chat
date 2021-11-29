@@ -1,0 +1,43 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.*?>
+<?import javafx.scene.layout.*?>
+<?import javafx.scene.text.*?>
+
+<AnchorPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="586.0" prefWidth="921.0" style="-fx-background-color: #3c3e42;" xmlns="http://javafx.com/javafx/11.0.2" xmlns:fx="http://javafx.com/fxml/1" fx:controller="org.shinodanpen.javachat.client.ClientController">
+
+
+   <TextField fx:id="usernameField" layoutX="78.0" layoutY="55.0" promptText="Default: user" />
+   <Label layoutX="14.0" layoutY="59.0" text="Username:" textFill="WHITE">
+      <font>
+         <Font name="System Bold" size="12.0" />
+      </font>
+   </Label>
+   <TextField fx:id="portField" layoutX="78.0" layoutY="194.0" promptText="Default: 49654" />
+   <Label layoutX="38.0" layoutY="198.0" prefHeight="17.0" prefWidth="32.0" text="Port:" textFill="WHITE">
+      <font>
+         <Font name="System Bold" size="12.0" />
+      </font>
+   </Label>
+   <TextField fx:id="addressField" layoutX="78.0" layoutY="152.0" promptText="Default: localhost" />
+   <Label layoutX="20.0" layoutY="156.0" prefHeight="17.0" prefWidth="50.0" text="Address:" textFill="WHITE">
+      <font>
+         <Font name="System Bold" size="12.0" />
+      </font>
+   </Label>
+   <HBox layoutX="277.0" layoutY="503.0" prefHeight="69.0" prefWidth="630.0">
+      <TextArea fx:id="messageArea" disable="true" prefHeight="69.0" prefWidth="557.0" promptText="Say something..." />
+      <Button fx:id="sendButton" mnemonicParsing="false" onAction="#onSendButtonClick" prefHeight="69.0" prefWidth="76.0" text="Send" />
+   </HBox>
+   <RadioButton fx:id="connectButton" layoutX="78.0" layoutY="247.0" mnemonicParsing="false" onAction="#onConnectButtonClick" text="CONNECT" textAlignment="CENTER" textFill="WHITE">
+      <font>
+         <Font name="System Bold Italic" size="12.0" />
+      </font>
+   </RadioButton>
+   <RadioButton fx:id="disconnectButton" disable="true" layoutX="78.0" layoutY="276.0" mnemonicParsing="false" onAction="#onDisconnectButtonClick" text="DISCONNECT" textAlignment="CENTER" textFill="WHITE">
+      <font>
+         <Font name="System Bold Italic" size="12.0" />
+      </font>
+   </RadioButton>
+   <ListView fx:id="messageListView" disable="true" editable="true" layoutX="277.0" layoutY="34.0" prefHeight="445.0" prefWidth="630.0" style="-fx-background-color: #ffffff;" />
+</AnchorPane>
